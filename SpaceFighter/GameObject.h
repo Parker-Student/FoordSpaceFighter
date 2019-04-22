@@ -36,7 +36,7 @@ public:
 
 	virtual Vector2 &GetPreviousPosition() { return m_previousPosition; }
 
-	virtual std::string ToString() const = 0;
+	virtual std::string ToString() const = 0; //Pure Virtual
 
 	virtual Vector2 GetHalfDimensions() const;
 
