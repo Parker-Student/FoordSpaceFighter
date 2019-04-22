@@ -12,7 +12,7 @@ GameplayScreen::GameplayScreen(const int levelIndex)
 	}
 
 
-	SetTransitionInTime(1.0f);
+	SetTransitionInTime(2.0f);
 	SetTransitionOutTime(0.5f);
 
 	Show();
