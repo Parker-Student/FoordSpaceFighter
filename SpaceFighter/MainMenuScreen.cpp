@@ -57,7 +57,7 @@ void MainMenuScreen::LoadContent(ResourceManager *pResourceManager)
 	{
 		pItem = new MenuItem(text[i]);
 		pItem->SetPosition(Vector2(100, 100 + 50 * i));
-		pItem->SetFont(pFont);
+		pItem->SetFont(arialbi.ttf);
 		pItem->SetColor(Color::Blue);
 		pItem->SetSelected(i == 0);
 		AddMenuItem(pItem);
