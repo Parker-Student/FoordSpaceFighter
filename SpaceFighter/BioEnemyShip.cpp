@@ -1,7 +1,7 @@
 
 #include "BioEnemyShip.h"
 
-
+// sets the rules of the ship (speed,hp,hitbox)
 BioEnemyShip::BioEnemyShip()
 {
 	SetSpeed(150);
@@ -11,21 +11,21 @@ BioEnemyShip::BioEnemyShip()
 
 
 void BioEnemyShip::Update(const GameTime *pGameTime)
-{
-	if (IsActive())
+{   
+	if (IsActive())//activates the ship after checking the game time
 	{
-		float x = sin(pGameTime->GetTotalTime() * Math::PI + GetIndex());
-		x *= GetSpeed() * pGameTime->GetTimeElapsed() * 1.4f;
-		TranslatePosition(x, GetSpeed() * pGameTime->GetTimeElapsed());
+		float x = sin(pGameTime->GetTotalTime() * Math::PI + GetIndex()); // uses sin to determine the path of the ship (should apear as waves.) 
+		x *= GetSpeed() * pGameTime->GetTimeElapsed() * 1.4f;            // sets the speed of enemies based on the time elapsed in the game. Longer the game faster the enemies.
+		TranslatePosition(x, GetSpeed() * pGameTime->GetTimeElapsed()); 
 
-		if (!IsOnScreen()) Deactivate();
+		if (!IsOnScreen()) Deactivate(); // stops the ships after they go off screen.
 	}
 
-	EnemyShip::Update(pGameTime);
+	EnemyShip::Update(pGameTime); //updates enemy ships based on the game time.
 }
 
 
-void BioEnemyShip::Draw(SpriteBatch *pSpriteBatch)
+void BioEnemyShip::Draw(SpriteBatch *pSpriteBatch) //draws the enemy ship.
 {
 	if (IsActive())
 	{
