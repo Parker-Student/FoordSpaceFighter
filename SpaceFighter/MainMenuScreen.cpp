@@ -30,7 +30,7 @@ MainMenuScreen::MainMenuScreen()
 
 	SetRemoveCallback(OnScreenRemove);
 
-	SetTransitionInTime(1.0f);
+	SetTransitionInTime(2.0f);
 	SetTransitionOutTime(0.5f);
 
 	Show(); // Show the screen
@@ -46,7 +46,7 @@ void MainMenuScreen::LoadContent(ResourceManager *pResourceManager)
 	const int COUNT = 2;
 	MenuItem *pItem;
 	Font::SetLoadSize(20, true);
-	Font *pFont = pResourceManager->Load<Font>("Fonts\\Ethnocentric.ttf");
+	Font *pFont = pResourceManager->Load<Font>("Fonts\\arialbd.ttf");
 
 	SetDisplayCount(COUNT);
 
