@@ -77,8 +77,8 @@ void MainMenuScreen::Update(const GameTime *pGameTime)
 		pItem = GetMenuItem(i);
 		pItem->SetAlpha(GetAlpha());
 
-		if (pItem->IsSelected()) pItem->SetColor(Color::White);
-		else pItem->SetColor(Color::Blue);
+		if (pItem->IsSelected()) pItem->SetColor(Color::AliceBlue);
+		else pItem->SetColor(Color::White);
 	}
 
 	MenuScreen::Update(pGameTime);
