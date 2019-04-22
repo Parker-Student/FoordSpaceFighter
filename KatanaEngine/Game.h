@@ -45,7 +45,7 @@ namespace KatanaEngine
 
 		/** @brief Gets the name of the game.
 			@return The name of the game. */
-		virtual std::string GetName() const = 0;
+		virtual std::string GetName() const = 0; //Pure virtual
 
 		/** @brief Gets a pointer to the ResourceManager, for loading and managing resources.
 			@return A pointer to the game's ResourceManager instance. */
