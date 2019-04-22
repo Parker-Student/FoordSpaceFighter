@@ -42,7 +42,7 @@ public:
 
 	virtual uint32_t GetIndex() const { return m_index; }
 
-	virtual CollisionType GetCollisionType() const = 0;
+	virtual CollisionType GetCollisionType() const = 0; // Pure Virtual
 
 	virtual float GetCollisionRadius() const { return m_collisionRadius; }
 
